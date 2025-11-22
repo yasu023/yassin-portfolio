@@ -1,13 +1,12 @@
 @import "tailwindcss";
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+/* اجبار الصفحة تبدأ Dark قبل أي تحميل */
 html {
   background-color: #0a0a0a;
   color: white;
 }
 
+/* Tailwind Theme */
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
@@ -36,6 +35,7 @@ html {
       transform: translateY(-10px);
     }
   }
+
   @keyframes pulse-subtle {
     0%,
     100% {
@@ -45,6 +45,7 @@ html {
       opacity: 0.8;
     }
   }
+
   @keyframes fade-in {
     from {
       opacity: 0;
@@ -55,6 +56,7 @@ html {
       transform: translateY(0);
     }
   }
+
   @keyframes meteor {
     0% {
       transform: rotate(215deg) translateX(0);
@@ -69,16 +71,11 @@ html {
     }
   }
 }
-:root {
-  color-scheme: dark;
-}
 
-
+/* ========== Theme Variables ========== */
 @layer base {
-@layer base {
-  @layer base {
+  /* --- Default Dark Mode Values --- */
   :root {
-    /* Dark Mode Default */
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
 
@@ -88,10 +85,12 @@ html {
     --primary-foreground: 213 31% 91%;
 
     --border: 217 33% 20%;
+
+    color-scheme: dark; /* ده يمنع White Flash */
   }
 
+  /* --- Light Mode --- */
   .light {
-    /* Light Mode */
     --background: 210 40% 98%;
     --foreground: 222 47% 11%;
 
@@ -102,18 +101,10 @@ html {
 
     --border: 214 32% 91%;
   }
-}
-
-
 
   * {
     @apply border-border;
-    cursor: default;
   }
-
-  a, button {
-  cursor: pointer;
-}
 
   html {
     @apply scroll-smooth;
@@ -125,6 +116,7 @@ html {
   }
 }
 
+/* ========== Utilities ========== */
 @utility container {
   margin-inline: auto;
   padding-inline: 2rem;
