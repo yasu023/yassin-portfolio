@@ -8,11 +8,11 @@ export const ThemeToggle = () => {
   useEffect(() => {
     const storedTheme = localStorage.getItem("theme");
     if (storedTheme === "dark") {
-      setIsDarkMode(false);
+      setIsDarkMode(true);
       document.documentElement.classList.add("dark");
     } else {
       localStorage.setItem("theme", "light");
-      setIsDarkMode(true);
+      setIsDarkMode(false);
     }
   }, []);
 
@@ -20,11 +20,11 @@ export const ThemeToggle = () => {
     if (isDarkMode) {
       document.documentElement.classList.remove("dark");
       localStorage.setItem("theme", "light");
-      setIsDarkMode(true);
+      setIsDarkMode(false);
     } else {
       document.documentElement.classList.add("dark");
       localStorage.setItem("theme", "dark");
-      setIsDarkMode(false);
+      setIsDarkMode(true);
     }
   };
 
