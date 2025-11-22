@@ -85,13 +85,14 @@ export const ContactSection = () => {
       </div>
       </div>
 
-      <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
+      <div className="bg-card p-8 rounded-lg shadow-xs">
         <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
   <form
     action="https://formsubmit.co/yassin.khaled.dev@gmail.com"
     method="POST"
    className="space-y-6">
+    onSubmit={handleSubmit}
     <input type="hidden" name="_captcha" value="false" />
     <input type="hidden" name="_subject" value="New message from your portfolio!" />
     <input type="hidden" name="_next" value="https://yassin-portfolio-one.vercel.app/" />
