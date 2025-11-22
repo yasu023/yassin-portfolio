@@ -64,6 +64,10 @@
     }
   }
 }
+:root {
+  color-scheme: dark;
+}
+
 
 @layer base {
   :root {
