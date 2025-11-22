@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  background-color: #0a0a0a;
+  color: white;
+}
+
 @theme {
   --color-border: hsl(var(--border));
   --color-background: hsl(var(--background));
@@ -70,19 +75,10 @@
 
 
 @layer base {
+@layer base {
+  @layer base {
   :root {
-    --background: 210 40% 98%;
-    --foreground: 222 47% 11%;
-
-    --card: 0 0% 100%;
-
-    --primary: 250 47% 60%;
-    --primary-foreground: 210 40% 98%;
-
-    --border: 214 32% 91%;
-  }
-
-  .dark {
+    /* Dark Mode Default */
     --background: 222 47% 4%;
     --foreground: 213 31% 91%;
 
@@ -93,6 +89,22 @@
 
     --border: 217 33% 20%;
   }
+
+  .light {
+    /* Light Mode */
+    --background: 210 40% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+
+    --primary: 250 47% 60%;
+    --primary-foreground: 210 40% 98%;
+
+    --border: 214 32% 91%;
+  }
+}
+
+
 
   * {
     @apply border-border;
