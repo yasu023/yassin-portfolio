@@ -88,69 +88,78 @@ export const ContactSection = () => {
       <div className="bg-card p-8 rounded-lg shadow-xs" onSubmit={handleSubmit}>
         <h3 className="text-2xl font-semibold mb-6"> Send a Message</h3>
 
-<form
-  action="https://formsubmit.co/yassin.khaled.dev@gmail.com"
-  method="POST"
-  className="space-y-6"
-  onSubmit={() => setIsSubmitting(true)}
->
-  {/* hidden settings for FormSubmit */}
-  <input type="hidden" name="_captcha" value="false" />
-  <input type="hidden" name="_subject" value="New message from your portfolio!" />
-  <input type="hidden" name="_next" value="https://yassin-portfolio-one.vercel.app/" />
+  <form
+    action="https://formsubmit.co/yassin.khaled.dev@gmail.com"
+    method="POST"
+   className="space-y-6">
+    <input type="hidden" name="_captcha" value="false" />
+    <input type="hidden" name="_subject" value="New message from your portfolio!" />
+    <input type="hidden" name="_next" value="https://yassin-portfolio-one.vercel.app/" />
 
-  <div>
-    <label htmlFor="name" className="block text-sm font-medium mb-2">
-      Your Name
-    </label>
-    <input
-      type="text"
-      name="name"
-      id="name"
-      required
-      className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary cursor-pointer"
-      placeholder="Pedro Machado..."
-    />
-  </div>
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium mb-2"
+                >
+                  {" "}
+                  Your Name
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  placeholder="Pedro Machado..."
+                />
+              </div>
 
-  <div>
-    <label htmlFor="email" className="block text-sm font-medium mb-2">
-      Your Email
-    </label>
-    <input
-      type="email"
-      name="email"
-      id="email"
-      required
-      className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary cursor-pointer"
-      placeholder="john@gmail.com"
-    />
-  </div>
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium mb-2"
+                >
+                  {" "}
+                  Your Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary"
+                  placeholder="john@gmail.com"
+                />
+              </div>
 
-  <div>
-    <label htmlFor="message" className="block text-sm font-medium mb-2">
-      Your Message
-    </label>
-    <textarea
-      name="message"
-      id="message"
-      required
-      className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden focus:ring-2 focus:ring-primary resize-none cursor-pointer"
-      placeholder="Hello, I'd like to talk about..."
-    ></textarea>
-  </div>
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium mb-2"
+                >
+                  {" "}
+                  Your Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  className="w-full px-4 py-3 rounded-md border border-input bg-background focus:outline-hidden foucs:ring-2 focus:ring-primary resize-none"
+                  placeholder="Hello, I'd like to talk about..."
+                />
+              </div>
 
-  <button
-    type="submit"
-    disabled={isSubmitting}
-    className={cn(
-      "cosmic-button w-full flex items-center justify-center gap-2"
-    )}
-  >
-    {isSubmitting ? "Sending..." : "Send Message"}
-    <Send size={16} />
-  </button>
-</form>
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className={cn(
+                  "cosmic-button w-full flex items-center justify-center gap-2"
+                )}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+                <Send size={16} />
+              </button>
+            </form>
 
       </div>
     </div>
