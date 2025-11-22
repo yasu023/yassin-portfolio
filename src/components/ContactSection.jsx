@@ -91,8 +91,9 @@ export const ContactSection = () => {
   <form
     action="https://formsubmit.co/yassin.khaled.dev@gmail.com"
     method="POST"
-   className="space-y-6">
+    className="space-y-6"
     onSubmit={handleSubmit}
+    >
     <input type="hidden" name="_captcha" value="false" />
     <input type="hidden" name="_subject" value="New message from your portfolio!" />
     <input type="hidden" name="_next" value="https://yassin-portfolio-one.vercel.app/" />
